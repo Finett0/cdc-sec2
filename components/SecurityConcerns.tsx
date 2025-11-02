@@ -1,8 +1,9 @@
 export default function SecurityConcerns() {
   const concerns = [
-    "Uso indevido de bibliotecas e dependências vulneráveis",
-    "Dependência cega e falsa sensação de segurança", 
-    "Geração de código com credenciais expostas"
+    "Credenciais da API expostas no código-fonte",
+    "Bibliotecas vulneráveis instaladas no projeto",
+    "Dependências desatualizadas com CVEs conhecidos",
+    "Tokens e secrets commitados sem querer"
   ]
 
   return (
@@ -12,7 +13,9 @@ export default function SecurityConcerns() {
           {/* Left Column - Heading */}
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
-              Garanta que seu software está sendo desenvolvido com segurança
+              Desenvolvendo rápido com IA?
+              <br />
+              Esses problemas são comuns:
             </h2>
           </div>
 

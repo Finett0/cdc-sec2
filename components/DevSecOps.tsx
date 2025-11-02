@@ -30,10 +30,10 @@ export default function DevSecOps() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            DevSecOps para seu Software gerado com IA
+            Desenvolveu com IA? Garanta que está seguro.
           </h2>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Ferramenta Plug-and-play para scanear vulnerabilidades no seu SaaS
+            Agent CLI que identifica problemas de segurança no código do seu MVP
           </p>
         </div>
 

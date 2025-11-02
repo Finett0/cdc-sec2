@@ -7,10 +7,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
-    { name: 'Integration', href: '#integration' },
+    { name: 'Features', href: '#Features' },
+    { name: 'Como Funciona', href: '#how' },
     { name: 'Blog', href: '#blog' },
     { name: 'Docs', href: '#docs' },
-    { name: 'Get Demo', href: '#demo' },
   ]
 
   return (
@@ -47,10 +47,10 @@ export default function Header() {
               Login
             </a>
             <a
-              href="#contact"
-              className="bg-primary-600 hover:bg-primary-700 px-5 py-2.5 rounded-full text-white font-medium text-sm transition-colors"
+              href="#demo"
+              className="bg-primary-600 hover:bg-primary-700 px-5 py-2.5 rounded-full text-white font-medium text-sm transition-colors shadow-lg shadow-primary-600/30"
             >
-              Contact
+              Começar agora
             </a>
           </div>
 
@@ -88,11 +88,11 @@ export default function Header() {
                   Login
                 </a>
                 <a
-                  href="#contact"
+                  href="#demo"
                   className="flex-1 px-3 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg text-white font-medium text-center transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Começar agora
                 </a>
               </div>
             </div>

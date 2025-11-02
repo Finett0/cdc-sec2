@@ -8,13 +8,18 @@ export default function Footer() {
     { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@sec2.com", label: "Email" },
   ]
 
-  const quickLinks = [
-    { name: 'Integration', href: '#integration' },
-    { name: 'Blog', href: '#blog' },
+  const productLinks = [
+    { name: 'Features', href: '#Features' },
+    { name: 'Como funciona', href: '#how' },
     { name: 'Docs', href: '#docs' },
-    { name: 'Get Demo', href: '#demo' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Support', href: '#support' },
+    { name: 'GitHub', href: '#github' },
+  ]
+
+  const companyLinks = [
+    { name: 'Blog', href: '#blog' },
+    { name: 'Sobre', href: '#about' },
+    { name: 'Contato', href: '#contact' },
+    { name: 'Suporte', href: '#support' },
   ]
 
   const legalLinks = [
@@ -32,7 +37,7 @@ export default function Footer() {
             <div className="mb-4">
               <h3 className="text-2xl font-bold text-white mb-2">sec2</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Security solutions for your software. Implementing DevSecOps with AI-powered vulnerability scanning.
+                CLI agent que escaneia vulnerabilidades, detecta credenciais expostas e identifica bibliotecas inseguras no seu MVP.
               </p>
             </div>
             
@@ -55,11 +60,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Product Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4">Produto</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {productLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
@@ -72,11 +77,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Company Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Legal</h4>
+            <h4 className="text-white font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2">
-              {legalLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
@@ -89,12 +94,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Media & Newsletter */}
+          {/* Social Media & Security Badge */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Connect With Us</h4>
+            <h4 className="text-white font-semibold mb-4">Conecte-se</h4>
             
             {/* Social Media Icons */}
-            <div className="flex space-x-4 mb-6">
+            <div className="flex space-x-4 mb-8">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -109,39 +114,37 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Newsletter Signup */}
-            <div>
-              <p className="text-gray-400 text-sm mb-3">Stay updated with our latest news</p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white text-sm focus:outline-none focus:border-primary-500"
-                />
-                <button className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-r-lg text-sm font-medium transition-colors">
-                  Subscribe
-                </button>
+            {/* Security Badge */}
+            <div className="bg-gray-900 border border-gray-800 rounded-lg p-4">
+              <div className="flex items-center mb-2">
+                <svg className="w-5 h-5 mr-2 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-white font-semibold text-sm">Seguro & Confiável</span>
               </div>
+              <p className="text-gray-400 text-xs">
+                Dados criptografados e conformidade SOC 2
+              </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 sec2. Todos os direitos reservados.
+              © 2025 sec2. Todos os direitos reservados.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy
-              </a>
-              <a href="#terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms
-              </a>
-              <a href="#cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookies
-              </a>
+            <div className="flex flex-wrap justify-center gap-6">
+              {legalLinks.map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.href} 
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>

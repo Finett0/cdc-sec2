@@ -1,10 +1,10 @@
 export default function Content() {
   const articles = [
     {
-      title: "Qual é o preço da segurança?",
-      description: "Maiorias das startups em early stage não se preocupam com a segurança, resultado disso, dados vazados...",
-      cta: "Ler artigo no LinkedIn →",
-      href: "#linkedin-article"
+      title: "Por que seu MVP precisa de um scan de segurança",
+      description: "Todo mundo está desenvolvendo com IA, mas poucos se preocupam com segurança. Credenciais expostas, bibliotecas vulneráveis... descubra como proteger seu MVP.",
+      cta: "Ler artigo completo →",
+      href: "#blog"
     }
   ]
 
